@@ -1,24 +1,22 @@
-# README
+Example GET request:
+```
+fetch('http://localhost:3000/v1/companies')
+ .then(resp=>resp.json())
+ .then(company=>console.log(company))
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Example POST request to create a new company:
+```
+fetch('http://localhost:3000/v1/companies', {
+	method: "POST",
+	headers: {
+		"Content-Type": "application/json"
+	},
+	body: JSON.stringify({
+		company: {
+			"name": "Second company"
+		}
+	})
+})
+	.then(resp=>resp.json())
+```
