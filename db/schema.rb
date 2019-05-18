@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_05_18_214635) do
     t.integer "shipment_id"
     t.integer "company_id"
     t.integer "carrier_id"
+    t.string "estimated_delivery"
     t.string "actual_delivery"
     t.integer "price"
     t.datetime "created_at", null: false
