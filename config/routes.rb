@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'carriers/index'
-  get 'carriers/create'
-  get 'users/index'
-  get 'users/create'
   get '/v1/shipments', to: "shipments#index"
   post '/v1/shipments', to: "shipments#create"
 
@@ -11,6 +7,9 @@ Rails.application.routes.draw do
 
   get '/v1/companies', to: "companies#index"
   post '/v1/companies', to: "companies#create"
+
+  get '/v1/carriers', to: "carriers#index"
+  post '/v1/carriers', to: "carriers#create"
 
   # get 'deliveries/index'
   # get 'shipments/index'

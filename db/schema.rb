@@ -28,10 +28,12 @@ ActiveRecord::Schema.define(version: 2019_05_18_214635) do
   create_table "deliveries", force: :cascade do |t|
     t.integer "shipment_id"
     t.integer "company_id"
+    t.integer "carrier_id"
     t.string "actual_delivery"
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["carrier_id"], name: "index_deliveries_on_carrier_id"
     t.index ["company_id"], name: "index_deliveries_on_company_id"
     t.index ["shipment_id"], name: "index_deliveries_on_shipment_id"
   end
