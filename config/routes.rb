@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/v1/companies', to: "companies#create"
 
   get '/v1/carriers', to: "carriers#index"
+  get '/v1/carriers/:id', to: "carriers#show"
   post '/v1/carriers', to: "carriers#create"
 
   # get 'deliveries/index'
