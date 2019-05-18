@@ -1,3 +1,3 @@
 class DeliverySerializer < ActiveModel::Serializer
-  attributes :id, :actual_delivery, :shipment_id, :company_id, :estimated_delivery
+  attributes :id, :shipment_id, :company_id, :carrier_id, :estimated_delivery, :actual_delivery
 end
