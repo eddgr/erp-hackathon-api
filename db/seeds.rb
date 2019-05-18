@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 require 'date'
-byebug
+# byebug
 # require 'securerandom'
 ship_name = Faker::Name.first_name + Faker::Name.last_name
 phone_number = Faker::PhoneNumber.phone_number
@@ -16,6 +16,7 @@ ship_from_name = Faker::Company.name
 ship_from_address = 
 " #{Faker::Address.street_name} #{Faker::Address.city} #{Faker::Address.state} #{Faker::Address.zip_code}"
 random_number = rand(2..5)
+random_number2= rand(-1..1)
 # byebug
 
 carriers = ["USPS", "FEDEX", "DHL", 'UPS']
@@ -28,7 +29,7 @@ end
 
 
 # <----Carrier Seeds --->
-carriers.each do |carrierr|
+carriers.each do |carrier|
 Carrier.create(name: carrier)
 end 
 # <----Carrier Seeds --->
@@ -42,7 +43,7 @@ end
 # <-----Shimpment Seeds ----->
 
 Shipment.all.each do |shipment|
-Delivery.create(shipment_id: shipment.id, company_id: shipment.company.id, carrier_id: shipment.carrier.id)
+Delivery.create(shipment_id: shipment.id, company_id: shipment.company.id,estimated_delivery:shipment.estimated_delivery, actual_delivery: Date.today + random_number2, carrier_id: shipment.carrier.id)
 end
 
 
