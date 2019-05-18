@@ -2,6 +2,8 @@ class CreateShipments < ActiveRecord::Migration[5.2]
   def change
     create_table :shipments do |t|
       t.belongs_to :company, foreign_key: true
+      t.belongs_to :carrier, foreign_key: true
+
       t.string :ship_to_name
       t.string :ship_to_address
 

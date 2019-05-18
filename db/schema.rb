@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_18_173701) do
+ActiveRecord::Schema.define(version: 2019_05_18_214635) do
+
+  create_table "carriers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -32,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_05_18_173701) do
 
   create_table "shipments", force: :cascade do |t|
     t.integer "company_id"
+    t.integer "carrier_id"
     t.string "ship_to_name"
     t.string "ship_to_address"
     t.string "ship_from_name"
@@ -41,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_05_18_173701) do
     t.integer "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["carrier_id"], name: "index_shipments_on_carrier_id"
     t.index ["company_id"], name: "index_shipments_on_company_id"
   end
 
