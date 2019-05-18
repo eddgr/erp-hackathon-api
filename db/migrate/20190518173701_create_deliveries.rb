@@ -1,0 +1,10 @@
+class CreateDeliveries < ActiveRecord::Migration[5.2]
+  def change
+    create_table :deliveries do |t|
+      t.belongs_to :shipment, foreign_key: true
+      t.string :actual_delivery
+
+      t.timestamps
+    end
+  end
+end
