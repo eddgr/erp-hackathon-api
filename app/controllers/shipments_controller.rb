@@ -15,6 +15,6 @@ class ShipmentsController < ApplicationController
   private
 
   def shipment_params
-    params.require(:shipment).permit(:company_id, :ship_to_name, :ship_to_address, :ship_from_name, :ship_from_address, :package_weight, :estimated_delivery, :cost)
+    params.require(:shipment).permit(:company_id, :ship_to_name, :ship_to_address, :ship_from_name, :ship_from_address, :package_weight, :estimated_delivery, :cost, :carrier_id)
   end
 end

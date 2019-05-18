@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'carriers/index'
+  get 'carriers/create'
   get 'users/index'
   get 'users/create'
   get '/v1/shipments', to: "shipments#index"
