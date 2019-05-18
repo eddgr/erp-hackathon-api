@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2019_05_18_173701) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
+    t.integer "shipping_cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -22,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_05_18_173701) do
     t.integer "shipment_id"
     t.integer "company_id"
     t.string "actual_delivery"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_deliveries_on_company_id"
@@ -31,25 +33,12 @@ ActiveRecord::Schema.define(version: 2019_05_18_173701) do
   create_table "shipments", force: :cascade do |t|
     t.integer "company_id"
     t.string "ship_to_name"
-    t.string "ship_to_phone"
-    t.string "ship_to_company_name"
-    t.string "ship_to_address_line1"
-    t.string "ship_to_address_line2"
-    t.string "ship_to_city_locality"
-    t.string "ship_to_state_province"
-    t.string "ship_to_postal_code"
-    t.string "ship_to_country_code"
+    t.string "ship_to_address"
     t.string "ship_from_name"
-    t.string "ship_from_phone"
-    t.string "ship_from_company_name"
-    t.string "ship_from_address_line1"
-    t.string "ship_from_address_line2"
-    t.string "ship_from_city_locality"
-    t.string "ship_from_state_province"
-    t.string "ship_from_postal_code"
-    t.string "ship_from_country_code"
+    t.string "ship_from_address"
     t.string "package_weight"
     t.string "estimated_delivery"
+    t.integer "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_shipments_on_company_id"
