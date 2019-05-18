@@ -16,7 +16,7 @@ ship_from_name = Faker::Company.name
 ship_from_address = 
 " #{Faker::Address.street_name} #{Faker::Address.city} #{Faker::Address.state} #{Faker::Address.zip_code}"
 random_number = rand(2..5)
-random_number2= rand(-1..1)
+random_number2 = rand(-1..1)
 # byebug
 
 carriers = ["USPS", "FEDEX", "DHL", 'UPS']
@@ -38,12 +38,12 @@ end
 50.times do 
 Shipment.create(company_id: rand(1..Company.all.length),carrier_id:rand(1..Carrier.all.length), ship_to_name:ship_name, ship_to_address: ship_address,
      ship_from_name: ship_from_name, ship_from_address:ship_from_address, package_weight: random_number.to_f,
-     created_at: Date.today - random_number, estimated_delivery: Date.today, cost: random_number.to_f)
+     created_at: Date.today - random_number, estimated_delivery: Date.today - 1, cost: random_number.to_f)
 end
 # <-----Shimpment Seeds ----->
-
 Shipment.all.each do |shipment|
-Delivery.create(shipment_id: shipment.id, company_id: shipment.company.id,estimated_delivery:shipment.estimated_delivery, actual_delivery: Date.today + random_number2, carrier_id: shipment.carrier.id)
+     # byebug
+Delivery.create(shipment_id: shipment.id, company_id: shipment.company.id, estimated_delivery:shipment.estimated_delivery, actual_delivery: Date.today + rand(-2..0), carrier_id: shipment.carrier.id)
 end
 
 
