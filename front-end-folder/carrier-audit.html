@@ -4,8 +4,45 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+    </style>
+  <nav id="header">
+    <ul>
+      <li><img width="100px" height="100px" src="https://cdn.freebiesupply.com/logos/large/2x/deft-logo-png-transparent.png" alt="Deft"></li>
+      <li style="float:right"><a href="./company-settings.html">Settings</a></li>
+      <li style="float:right"><a href="#logout">Logout</a></li>
+    </ul>
+  </nav>
   <body>
-    <a href="/Users/ferrisboran/hackathon/erp-hackathon-api/front-end-folder/companies-index.html">Companies Settings</a>
+    <a href="./company-settings.html">Companies Settings</a>
+    <a href="./carrier-audit.html">Carrier Audit</a>
+    <a href="./customer-orders.html">Customer Orders</a>
+    <a href="./delivery-audit.html">Delivery Audit</a>
+    <a href="./shipments.html">Shipments</a>
+    <a href="./index.html">Index</a>
     <script src="./src/carrier-audit.js"></script>
   </body>
 </html>
