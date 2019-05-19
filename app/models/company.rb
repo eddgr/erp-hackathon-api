@@ -12,7 +12,7 @@ class Company < ApplicationRecord
     # counting all the early and on time, divide that by total to get FINAL reliability score
   end
 
-  def total_orders
+  def total_deliveries
     self.deliveries.count
   end
 
