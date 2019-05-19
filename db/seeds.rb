@@ -39,5 +39,5 @@ end
 # <-----Shimpment Seeds ----->
 Shipment.all.each do |shipment|
      # byebug
-Delivery.create(shipment_id: shipment.id, company_id: shipment.company.id, estimated_delivery:shipment.estimated_delivery, actual_delivery: Date.today + rand(-2..0), carrier_id: shipment.carrier.id)
+Delivery.create(shipment_id: shipment.id, company_id: shipment.company.id, estimated_delivery:shipment.estimated_delivery, actual_delivery: Date.today + rand(-2..0), carrier_id: shipment.carrier.id, price: shipment.cost)
 end
