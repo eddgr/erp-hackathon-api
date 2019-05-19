@@ -2,10 +2,49 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Delivery Audit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./src/delivery-audit.js"></script>
   </head>
   <body>
-    <a href="/Users/ferrisboran/hackathon/erp-hackathon-api/front-end-folder/companies-index.html">Companies Settings</a>
-    <script src="./src/delivery-audit.js"></script>
+    <nav class="navbar">
+      <a href="" class="nav-brand">Companies Settings</a>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div id="delivery-container" class="jumbotron w-100">
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">Total Deliveries</h5>
+              <p class="card-text" id="totalDeliveries"></p>
+            </div>
+          </div> <!-- end card 1 -->
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">Total Cost</h5>
+              <p class="card-text" id="totalCost"></p>
+            </div>
+          </div> <!-- end card 2 -->
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">On Time Deliveries</h5>
+              <p class="card-text" id="onTimeDeliveries"></p>
+            </div>
+          </div> <!-- end card 3 -->
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">Late Deliveries</h5>
+              <p class="card-text" id="lateDeliveries"></p>
+            </div>
+          </div> <!-- end card 4 -->
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">Late Cost (Refundable)</h5>
+              <p class="card-text" id="lateCost"></p>
+            </div>
+          </div> <!-- end card 5 -->
+        </div>
+      </div>
+    </div>
   </body>
 </html>
