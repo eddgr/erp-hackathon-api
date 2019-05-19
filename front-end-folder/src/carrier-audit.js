@@ -4,24 +4,30 @@ const SHIPMENTS_URL = `${BASE_URL}/v1/shipments`
 const COMPANIES_URL = `${BASE_URL}/v1/companies`
 const CARRIERS_URL = `${BASE_URL}/v1/carriers`
 
-function grab(ele) {
-  return document.querySelector('ele')
-}
+
+fetch(CARRIERS_URL)
+.then(function(response) {
+   return response.json();
+ }) //response start
+ .then(function(myJson) {
+   console.log(JSON.stringify(myJson));
+   var body = document.querySelector('#body')
+   for (let i = 0; i < myJson.length; i++){
+       // for (const id of myJson)
+
+       // debugger
+       body.innerHTML += `
+       <br>
+       <br>
+       <div class= 'container'>
+           <div class= 'card'>
+           <p>carrier id : ${myJson[i].id}</p>
+           <p>carrier name : ${myJson[i].name} </p>
+           <div>
+       <div>
+       `
+       // debugger
+   }
 
 
-fetch(CARRIERS_URL, {method: "GET"})
-  .then(function(resp) {
-    return resp.json()
-  })
-  .then(function(carriers) {
-    const carrierContainer = grab('#carrier-container')
-    carriers.forEach(function(carrier){
-      // debugger
-      console.log(carrier)
-      carrierContainer.innerHTML += `
-        <tr id="cname${carrier.id}">
-          <td>${carrier.name}</td>
-        </tr>
-      `
-      })
-  })
+ }); //fetch end
