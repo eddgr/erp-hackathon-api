@@ -7,5 +7,14 @@ const CARRIERS_URL = `${BASE_URL}/v1/carriers`
 console.log("hello")
 
 // # guarantee deliveries
+
+fetch(DELIVERIES_URL)
+  .then(resp => resp.json())
+  .then(json => console.log(json))
+
+
+
 // # of g deliveries on time
+
+
 // # late and cost needs to be refunded
