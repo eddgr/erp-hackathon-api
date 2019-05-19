@@ -4,13 +4,47 @@
     <meta charset="utf-8">
     <title>Delivery Audit</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./src/delivery-audit.js"></script>
   </head>
   <body>
-    <a href="">Companies Settings</a>
-    <div id="delivery-audit">
-
+    <nav class="navbar">
+      <a href="" class="nav-brand">Companies Settings</a>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div id="delivery-container" class="jumbotron w-100">
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">Total Deliveries</h5>
+              <p class="card-text" id="totalDeliveries"></p>
+            </div>
+          </div> <!-- end card 1 -->
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">Total Cost</h5>
+              <p class="card-text" id="totalCost"></p>
+            </div>
+          </div> <!-- end card 2 -->
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">On Time Deliveries</h5>
+              <p class="card-text" id="onTimeDeliveries"></p>
+            </div>
+          </div> <!-- end card 3 -->
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">Late Deliveries</h5>
+              <p class="card-text" id="lateDeliveries"></p>
+            </div>
+          </div> <!-- end card 4 -->
+          <div class="card col-4">
+            <div class="card-body">
+              <h5 class="card-title">Late Cost (Refundable)</h5>
+              <p class="card-text" id="lateCost"></p>
+            </div>
+          </div> <!-- end card 5 -->
+        </div>
+      </div>
     </div>
-    <script src="./src/delivery-audit.js"></script>
   </body>
 </html>
