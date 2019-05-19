@@ -8,4 +8,10 @@ const CARRIERS_URL = `${BASE_URL}/v1/carriers`
     return document.querySelector(selector)
   };
 
-const
+fetch(COMPANIES_URL)
+  .then(function(resp) {
+    return resp.json()
+  })
+  .then(function(comp) {
+    console.log(comp);
+  })
