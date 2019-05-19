@@ -5,6 +5,9 @@
     <title></title>
   </head>
   <style>
+    body {
+      background-color: lightblue;
+    }
     ul {
       list-style-type: none;
       margin: 0;
@@ -28,21 +31,41 @@
     li a:hover {
       background-color: #111;
     }
+    div .border {
+      border: 1px solid black;
+      margin: 50px;
+    }
+    div span {
+      padding: 50px
+    }
+    #container {
+      margin-top: 100px;
+    }
     </style>
   <nav id="header">
     <ul>
-      <li><img width="100px" height="100px" src="https://cdn.freebiesupply.com/logos/large/2x/deft-logo-png-transparent.png" alt="Deft"></li>
+      <li> <a href="./index.html"><img width="100px" height="100px" src="https://cdn.freebiesupply.com/logos/large/2x/deft-logo-png-transparent.png" alt="Deft"></a> </li>
       <li style="float:right"><a href="./company-settings.html">Settings</a></li>
       <li style="float:right"><a href="#logout">Logout</a></li>
     </ul>
   </nav>
 
   <body>
-    <a href="./carrier-audit.html">Carrier Audit</a>
-    <a href="./customer-orders.html">Customer Orders</a>
-    <a href="./delivery-audit.html">Delivery Audit</a>
-    <a href="./shipments.html">Shipments</a>
-    <a href="./index.html">Index</a>
+    <div id="container" display="inline">
+      <br>
+      <span class="border" id="carrier-audit">
+        <a href="./carrier-audit.html">Carrier Audit</a>
+      </span>
+      <span class="border" id="customer-orders">
+        <a href="./customer-orders.html">Customer Orders</a>
+      </span>
+      <span class="border" id="delivery-audit">
+        <a href="./delivery-audit.html">Delivery Audit</a>
+      </span>
+      <span class="border" id="shipments">
+        <a href="./shipments.html">Shipments</a>
+      </span>
+    </div>
     <script src="./src/index.js"></script>
   </body>
 </html>
