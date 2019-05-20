@@ -33,11 +33,4 @@ class Company < ApplicationRecord
     end.inject(0){|sum,x| sum + x }
   end
 
-  # def late_cost
-  #   # grab the price from sort_score[-1], sum and reduce
-  #   self.sort_score[-1].map do |delivery|
-  #     delivery.price
-  #   end.inject(0){|sum,x| sum + x }
-  # end
-
 end

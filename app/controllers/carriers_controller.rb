@@ -7,9 +7,7 @@ class CarriersController < ApplicationController
 
   def show
     @carrier = Carrier.find(params[:id])
-    @reliability_score = @carrier.reliability_score
-    # render json: @carrier, status: 200
-    render json: @reliability_score, status: 200
+    render json: @carrier, status: 200
   end
 
   # CREATE
